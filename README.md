@@ -11,3 +11,9 @@ Le logiciel doit être capable de :
   - [ ] Marquages au sol
   - [ ] Panneaux routiers
   - [ ] Usagers de la route (piétons, cyclistes, véhicules)
+
+## Prérequis pour le développement
+Il faut tout d'abord installer python 3.7.2
+Ensuite, il faut les librairies suivantes:
+  * Numpy 
+  * OpenCV
