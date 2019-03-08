@@ -16,3 +16,6 @@ Le logiciel doit être capable de :
   * Python 3.7.2
     * Pip 19.0.3 `python -m pip install pip --upgrade`
     * OpenCV `python -m pip install opencv-contrib-python --upgrade`
+
+## Répartition des tâches 
+![ADR](ADR.png)
