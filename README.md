@@ -19,3 +19,6 @@ Le logiciel doit être capable de :
 
 ## Répartition des tâches 
 ![ADR](ADR.png)
+
+## Travailler sur le projet
+  * Cloner le repository `git clone https://github.com/TheoDurr/adr`
