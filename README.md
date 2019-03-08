@@ -13,7 +13,6 @@ Le logiciel doit être capable de :
   - [ ] Usagers de la route (piétons, cyclistes, véhicules)
 
 ## Prérequis pour le développement
-Il faut tout d'abord installer python 3.7.2
-Ensuite, il faut les librairies suivantes:
-  * Numpy 
-  * OpenCV
+  * Python 3.7.2
+    * Pip 19.0.3 `python -m pip install pip --upgrade`
+    * OpenCV `python -m pip install opencv-contrib-python --upgrade`
