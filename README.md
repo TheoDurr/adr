@@ -17,7 +17,7 @@ Le logiciel doit être capable de :
     * Tensorflow `python -m pip install tensorflow`
 
 ## Répartition des tâches 
-![ADR](ADR.png)
+![ADR](Mindmap.png)
 
 ## Travailler sur le projet
   * Cloner le repository `git clone https://github.com/TheoDurr/adr`
