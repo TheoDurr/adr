@@ -7,7 +7,6 @@ Le logiciel doit être capable de détecter des éléments liés à l'environnem
 ## Spécifications / Fonctionnalités
 Le logiciel doit être capable de : 
   - [ ] Marquages au sol
-  - [ ] Panneaux routiers
   - [ ] Véhicules
 
 ## Prérequis pour le développement
