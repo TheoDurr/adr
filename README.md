@@ -27,5 +27,112 @@ Pour travailler sur ce projet, nous utiliserons python ainsi que diverses librai
     * Tensorflow (Modèle d'apprentissage automatisé) `python -m pip install tensorflow`
     * Tkinter (Gestion de l'interface graphique)
 
+## Fenêtre de sélection du fichier
+### Apercu
+![fileSelection](fileSelection.jpg)
+
+### Code
+```python
+# ─── IMPORT DES LIBRAIRIES ──────────────────────────────────────────────────────
+from tkinter import filedialog
+import tkinter as tk
+
+# ─── CALLBACKS ─────────────────────────────────────────────────────
+def openFile():
+    filePath = filedialog.askopenfilename(
+        initialdir = "/",
+        title = "Selectionner le fichier",
+        filetypes = (("Fichier mpeg","*.mp4"),("Tous les fichiers","*.*")))
+    fileEntry.set(filePath)
+def launchApp():
+    print(fileEntry.get())
+    mainWindow.quit()
+    app.App(tk.Tk(),"adr - Algorithme de détection de route", fileEntry.get())
+        
+# ─── PROGRAMME PRINCIPAL ────────────────────────────────────────────────────────
+mainWindow = tk.Tk()
+mainWindow.title("Adr - Sélection du fichier source")
+
+windowFrame = tk.LabelFrame(mainWindow, text = "Sélection du chemin du fichier", padx = 10)
+windowFrame.pack(fill = "both")
+
+fileFrame = tk.Frame(windowFrame)
+fileFrame.pack()
+
+fileLabel = tk.Label(fileFrame, text = "Fichier : ")
+fileLabel.pack(side = "left")
+
+fileEntry = tk.StringVar()
+entryField = tk.Entry(fileFrame, textvariable = fileEntry, width = 50).pack(side = "left")
+
+explorerMenu = tk.Button(fileFrame, text = "...", command = openFile)
+explorerMenu.pack()
+
+buttonFrame = tk.Frame(windowFrame, pady = 2)
+buttonFrame.pack(fill = "y")
+
+validateButton = tk.Button(buttonFrame, text = "Sélectionner", command = launchApp)
+validateButton.pack(side = "left")
+cancelButton = tk.Button(buttonFrame, text = "Annuler", command = mainWindow.quit).pack(side = "left")
+
+mainWindow.mainloop()
+```
+
+Dans un premier temps, nous importons toutes les librairies nécessaire au bon fonctionnement du programme, l'utilité de chacune d'elle est expliquée plus haut dans l'introduction.
+```python
+# ─── IMPORT DES LIBRAIRIES ──────────────────────────────────────────────────────
+from tkinter import filedialog
+import tkinter as tk
+```
+
+Ensuite, nous créons les deux fonctions qui seront appelées lors du clic sur les boutons ```...``` et ```Sélectionner```. Ces fonctions sont appelées des [**callbacks**](https://www.codefellows.org/blog/what-is-a-callback-anyway/)
+```python
+# ─── CALLBACKS ─────────────────────────────────────────────────────
+def openFile():
+    filePath = filedialog.askopenfilename(
+        initialdir = "/",
+        title = "Selectionner le fichier",
+        filetypes = (("Fichier mpeg","*.mp4"),("Tous les fichiers","*.*")))
+    fileEntry.set(filePath)
+def launchApp():
+    print(fileEntry.get())
+    mainWindow.quit()
+    app.App(tk.Tk(),"adr - Algorithme de détection de route", fileEntry.get()) # Appel de l'application
+```
+
+Le reste du code comprend la création de l'interface permettant de choisir le fichier en question :
+```python
+# ─── PROGRAMME PRINCIPAL ────────────────────────────────────────────────────────
+mainWindow = tk.Tk()
+mainWindow.title("Adr - Sélection du fichier source")
+
+windowFrame = tk.LabelFrame(mainWindow, text = "Sélection du chemin du fichier", padx = 10)
+windowFrame.pack(fill = "both")
+
+fileFrame = tk.Frame(windowFrame)
+fileFrame.pack()
+
+fileLabel = tk.Label(fileFrame, text = "Fichier : ")
+fileLabel.pack(side = "left")
+
+fileEntry = tk.StringVar()
+entryField = tk.Entry(fileFrame, textvariable = fileEntry, width = 50).pack(side = "left")
+
+explorerMenu = tk.Button(fileFrame, text = "...", command = openFile)
+explorerMenu.pack()
+
+buttonFrame = tk.Frame(windowFrame, pady = 2)
+buttonFrame.pack(fill = "y")
+
+validateButton = tk.Button(buttonFrame, text = "Sélectionner", command = launchApp)
+validateButton.pack(side = "left")
+cancelButton = tk.Button(buttonFrame, text = "Annuler", command = mainWindow.quit).pack(side = "left")
+
+mainWindow.mainloop()
+```
+Ce dernier morceau de code utilise de très nombreuses librairies TkInter et énormément de méthodes de cette librairie.
+
+
+
 ## Travailler sur le projet
   * Dupliquer ce repository `git clone https://github.com/TheoDurr/adr`
