@@ -85,7 +85,7 @@ from tkinter import filedialog
 import tkinter as tk
 ```
 
-Ensuite, nous créons les deux fonctions qui seront appelées lors du clic sur les boutons ```...``` et ```Sélectionner```. Ces fonctions sont appelées des [**callbacks**](https://www.codefellows.org/blog/what-is-a-callback-anyway/)
+Ensuite, nous créons les deux fonctions qui seront appelées lors du clic sur les boutons ```...``` et ```Sélectionner```. Ces fonctions sont appelées des [**callbacks**](https://www.codefellows.org/blog/what-is-a-callback-anyway/).
 ```python
 # ─── CALLBACKS ─────────────────────────────────────────────────────
 def openFile():
@@ -130,7 +130,7 @@ cancelButton = tk.Button(buttonFrame, text = "Annuler", command = mainWindow.qui
 
 mainWindow.mainloop()
 ```
-Ce dernier morceau de code utilise de très nombreuses librairies TkInter et énormément de méthodes de cette librairie.
+Ce dernier morceau de code utilise de très nombreuses librairies Tkinter et énormément de méthodes de cette librairie.
 
 
 
